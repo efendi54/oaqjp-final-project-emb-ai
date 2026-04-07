@@ -18,13 +18,16 @@ def emotion_detector_route():
     if response['dominant_emotion'] is None:
         return "Invalid text! Please try again!"
 
-    report = "For the given statement, the system response is "
-    report += f"'anger': {response['anger']}, "
-    report += f"'disgust': {response['disgust']}, "
-    report += f"'fear': {response['fear']}, "
-    report += f"'joy': {response['joy']} and "
-    report += f"'sadness': {response['sadness']}."
-    report += f"The dominant emotion is {response['dominant_emotion']}."
+    report = (
+        f"For the given statement, the system response is "
+        f"'anger': {response['anger']}, "
+        f"'disgust': {response['disgust']}, "
+        f"'fear': {response['fear']}, "
+        f"'joy': {response['joy']} and "
+        f"'sadness': {response['sadness']}."
+        f"The dominant emotion is {response['dominant_emotion']}."
+    )
+
     return report
 
 @app.route("/")

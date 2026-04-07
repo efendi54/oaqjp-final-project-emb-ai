@@ -11,7 +11,7 @@ def emotion_detector_route():
     report += f"'anger': {response['anger']}, "
     report += f"'disgust': {response['disgust']}, "
     report += f"'fear': {response['fear']}, "
-    report += f"'joy': {response['joy']} and " 
+    report += f"'joy': {response['joy']} and "
     report += f"'sadness': {response['sadness']}."
     report += f"The dominant emotion is {response['dominant_emotion']}."
     return report

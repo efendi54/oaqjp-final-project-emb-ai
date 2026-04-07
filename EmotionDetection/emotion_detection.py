@@ -14,7 +14,7 @@ def emotion_detector(text_to_analyse:str):
         'sadness': None,
         'dominant_emotion': None
     }
-    if response.status_code == 400
+    if response.status_code == 400:
         return report
     formatted_response = json.loads(response.text)
     emotion_predictions = formatted_response['emotionPredictions'][0]['emotion']

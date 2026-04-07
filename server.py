@@ -6,7 +6,7 @@ app = Flask("Emotion Detector")
 @app.route("/emotionDetector") 
 def emotion_detector(): 
     text_to_analyze = request.args.get('textToAnalyze')
-    response = emotion_detetector(text_to_analyze)
+    response = emotion_detector(text_to_analyze)
     report = "For the given statement, the system response is "
     report += f"'anger': {response['anger']}, "
     report += f"'disgust': {response['disgust']}, "

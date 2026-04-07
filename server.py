@@ -4,7 +4,7 @@ from EmotionDetection.emotion_detection import emotion_detector
 app = Flask("Emotion Detector")
 
 @app.route("/emotionDetector") 
-def emotion_detector(): 
+def emotion_detector_route(): 
     text_to_analyze = request.args.get('textToAnalyze')
     response = emotion_detector(text_to_analyze)
     report = "For the given statement, the system response is "
@@ -14,6 +14,7 @@ def emotion_detector():
     report += f"'joy': {response['joy']} and " 
     report += f"'sadness': {response['sadness']}."
     report += f"The dominant emotion is {response['dominant_emotion']}."
+    return report
 
 @app.route("/") 
 def render_index_page(): 
